@@ -1,0 +1,49 @@
+// responsive for device > 769px
+
+@media screen and (min-width: 769px){
+
+  h1{
+    font-size: 4rem;
+  }
+
+  nav{
+    .main-navigation__list {
+      flex-direction: row;
+      justify-content: space-evenly;
+      
+      width: 75%;
+    }
+
+    .main-navigation__list__item{
+      display: block;
+    }
+    
+    .main-navigation__list__item:not(:first-of-type) {
+      margin-top: inherit;
+    }
+    
+    .portfolio:nth-child(even) {
+      flex-direction: row;
+    }
+    
+    .portfolio:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+    
+    .portfolio__image-container img {
+      margin-top: 0;
+    }
+    
+    .container--about {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+
+  
+    // burger menu
+    button{
+      display: none;
+    }
+  }
+}
+    

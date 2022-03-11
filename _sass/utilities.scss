@@ -1,0 +1,40 @@
+// utilities
+
+.container {
+   display: flex;
+   justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+
+//                                  card for recipe
+.card-display{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .card-recipe{
+        border: 1px solid $primary-color--darker;
+        width: 300px;
+        height: auto;
+        margin: 10px;
+        text-align: center;
+        a{
+            all: unset;
+            color: $primary-color--darker;
+            font-size: 4vh;
+            cursor: pointer;
+        }
+        .card-image{
+            width: fit-content;
+            height: auto;
+            object-fit: none;
+        }
+        .card-text{
+            color: $secondary-color;
+        }
+    }
+}

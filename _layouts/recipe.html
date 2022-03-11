@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+    {% include navbar.html %}
+    <h2>Ingrédients : </h2>
+    {% for ingredient in page.ingredients %}
+		  <li>
+        <p>{{ ingredient[1] }} : {{ ingredient[0] }}</p>
+		  </li>
+    {% endfor %}
+
+    <p>Type de plat : {{ page.categories }}</p>
+    <p>Type de cuisine : {{ page.cuisine }}</p>
+    <p>Temps de préparation : {{ page.preptime }}</p>
+    <p>Temps de cuisson : {{ page.cooktime }}</p>
+    <p>Nombre de convive : {{ page.servings }}</p>
+    <p>Difficulté : {{ page.difficulty }}</p>
+    
+    <div>
+      <h2>Étapes de la recette</h2>
+      {% for instruction in page.instructions %}
+      <li>
+        <p>{{ instruction }}</p>
+		  </li>
+      {% endfor %}
+    </div>
+  
+    <p>Recette ajouté le  {{ page.date |  date: "%d-%m-%Y"  }} par {{ page.auteur }}</p>
+
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>

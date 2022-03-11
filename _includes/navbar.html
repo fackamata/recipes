@@ -1,0 +1,35 @@
+<nav class="main-navigation">
+  <ul class="main-navigation__list">
+    <li class="main-navigation__list__item">
+      <a href="{{ "/" | relative_url }}" 
+      class="main-navigation__link {% if page.title == "home" %} active {% endif %}">
+      Recette</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="{{ "/apero/" | relative_url }}" 
+      class="main-navigation__link {% if page.title == "apero" %} active {% endif %}">
+      Apéro</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="{{ "/plat/" | relative_url }}" 
+      class="main-navigation__link {% if page.title == "plat" %} active {% endif %}">
+      Plat</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="{{ "/dessert/" | relative_url }}" 
+      class="main-navigation__link {% if page.title == "dessert" %} active {% endif %}">
+      Déssert</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="{{ "/auteur/" | relative_url }}" 
+      class="main-navigation__link {% if page.title == "auteur" %} active {% endif %}">
+      auteur</a>
+    </li>
+  </ul>
+
+  <button id="burgerBtn">
+    <div class="menu-bar"></div>
+    <div class="menu-bar"></div>
+    <div class="menu-bar"></div>
+  </button>
+</nav>

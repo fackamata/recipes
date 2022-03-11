@@ -1,0 +1,41 @@
+---
+layout: default
+permalink: /auteur/
+title: auteur
+h1: auteurs
+---
+
+
+<!-- {% for recipe in site.recipes %}
+    {{recipe.tags[0] | inspect}}
+{% endfor %} -->
+
+<!-- <div id="archives">
+    {% for recipe in site.recipes %}
+      <div class="archive-group">
+        {% capture category_name %}{{ recipe.tags | first }}{% endcapture %}
+        <div id="#{{ category_name | slugize }}"></div>
+        <p></p>
+    
+        <h3 class="category-head">{{ category_name }}</h3>
+        <a name="{{ category_name | slugize }}"></a>
+        {% for recipe in site.categories[category_name] %}
+        <article class="archive-item">
+          <h4><a href="{{ site.baseurl }}{{ recipe.url }}">{{recipe.title}}</a></h4>
+        </article>
+        {% endfor %}
+      </div>
+    {% endfor %}
+    </div> -->
+
+    {% for recipe in site.recipes %}
+        <!-- {% assign my_array = recipe.categories | first | unique | join: ","%} -->
+        {% assign colors = product.variants | map:'option1' | uniq %}
+  {% for color in colors %}
+       <option>
+         {{ color }}
+       </option>
+  {% endfor %}
+        <!-- {{ my_array  | inspect }} -->
+        <!-- {{ my_array  | unique }} -->
+    {% endfor %}
