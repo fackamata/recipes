@@ -10,13 +10,18 @@ h1: plats
 
 	{% for recipe in site.recipes %}
 
-    {% if recipe.categories[0] == 'plat' %}   
+    {% if recipe.type == 'plat' %}   
 
       <article class="card-recipe">
         <div class="card-image">
           <a href="{{ recipe.url }}" class="mx-auto">
-            <img src="/assets/img/default-image.jpg" class='img-responsive' alt="image {{recipe.title }}">
-          </a>        </div>
+            {% if recipe.image %}
+              <img src="/assets/img/{{recipe.image}}" class='img-responsive' alt="image {{recipe.title }}">
+            {% else %}	
+              <img src="/assets/img/default-image.jpg" class='img-responsive' alt="image {{recipe.title }}">
+            {% endif %}
+          </a>      
+        </div>
         <div class="card-title">
           <a href="{{ recipe.url }}" class="mx-auto">{{ recipe.title }}</a>
         </div>

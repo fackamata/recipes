@@ -5,7 +5,7 @@
   h1{
     font-size: 4rem;
   }
-
+  //                navbar
   nav{
     .main-navigation__list {
       flex-direction: row;
@@ -44,6 +44,21 @@
     button{
       display: none;
     }
+  }
+  //                  accordion auteur
+  .accordion-display{
+    flex-direction: row;
+  }
+
+  //                  recette page
+
+  //                  list on 2 columns
+  .liste {
+    columns: 2;
+  }
+
+  .etape{
+    
   }
 }
     

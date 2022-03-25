@@ -1,0 +1,18 @@
+.caracteristique{
+    display: flex;
+    justify-content: space-around ;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.origin{
+    margin-top: 1rem;
+}
+
+.liste{
+    margin-left: 1rem;
+}
+
+.etape > li{
+    margin-top: 1rem;
+}

@@ -5,4 +5,4 @@ title: "recette" # the name of your site, e.g. ACME Corp.
 collections:
   recipes:
     output: true
-
+    permalink: /:collection/:categories/:path

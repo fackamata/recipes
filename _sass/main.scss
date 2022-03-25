@@ -14,19 +14,28 @@ $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-seri
 
 /* Reset */
 
-* {
+*{
   margin: 0;
   padding: 0;
-
+  box-sizing:border-box;
   font-family: $bodyFont;
 }
+// * {
+//   margin: 0;
+//   padding: 0;
+
+// }
 
 h1 {
   font-size: 3rem;
   max-width: max-content;
   margin: 30px auto;
 
-  color: $primary-color;
+  color: $primary-color--darker;
+}
+
+h2{
+  color: $primary-color--darker;
 }
 
 html{
@@ -40,4 +49,6 @@ main{
 ul{
   list-style: none;
 }
+
+
 

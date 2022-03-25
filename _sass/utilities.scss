@@ -1,14 +1,9 @@
 // utilities
 
-.container {
-   display: flex;
-   justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
-}
 
 .img-responsive {
     max-width: 100%;
+    // max-height: 100%;
 }
 
 //                                  card for recipe
@@ -19,7 +14,7 @@
     .card-recipe{
         border: 1px solid $primary-color--darker;
         width: 300px;
-        height: auto;
+        height: 300px;
         margin: 10px;
         text-align: center;
         a{
@@ -29,12 +24,60 @@
             cursor: pointer;
         }
         .card-image{
-            width: fit-content;
-            height: auto;
-            object-fit: none;
+            width: 300px;
+            height: 200px;
+            object-fit: fill;
+            overflow: hidden;
+        }
+        .card-title{
+            margin-top: 15px;
         }
         .card-text{
             color: $secondary-color;
         }
     }
 }
+
+
+//                          accordion
+.accordion-display{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .accordion-container{
+        padding: 1rem;
+        // width: 170px;
+        .accordion{
+            background:$primary-color--darker;
+            color:white;
+            text-align: center;
+            padding:1rem ;
+            width: 150px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .panel {
+          // position: relative;
+          display: none;
+          overflow: hidden;
+          p{
+              a{
+                  all: unset;
+                  color: $secondary-color;
+                  font-size: 1.5em;
+                  cursor: pointer;
+                }
+            }
+        } 
+    }
+  }
+
+
+    
+
+  //                    auteur display
+
+
+
+  
+    

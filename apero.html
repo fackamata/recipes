@@ -10,13 +10,17 @@ h1: apéros
 
 	{% for recipe in site.recipes %}
 
-    {% if recipe.categories[0] == 'apero' %}   
+    {% if recipe.type == 'apero' %}   
 
       <article class="card-recipe">
         <div class="card-image">
           <a href="{{ recipe.url }}" class="mx-auto">
-            <img src="/assets/img/default-image.jpg" class='img-responsive' alt="image {{recipe.title }}">
-          </a>
+            {% if recipe.image %}
+              <img src="/assets/img/{{recipe.image}}" class='img-responsive' alt="image {{recipe.title }}">
+            {% else %}	
+              <img src="/assets/img/default-image.jpg" class='img-responsive' alt="image {{recipe.title }}">
+            {% endif %}
+          </a>  
         </div>
         <div class="card-title">
           <a href="{{ recipe.url }}" class="mx-auto">{{ recipe.title }}</a>

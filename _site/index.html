@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>home</title>
+    <script src="https://kit.fontawesome.com/aeb3e6b307.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
@@ -35,6 +36,11 @@
       class="main-navigation__link ">
       auteur</a>
     </li>
+    <li class="main-navigation__list__item">
+      <a href="/cuisine/" 
+      class="main-navigation__link ">
+      cuisine</a>
+    </li>
   </ul>
 
   <button id="burgerBtn">
@@ -46,19 +52,23 @@
 
     <h1>Liste des recettes</h1>
 
-    <main class="container">
+    <main>
       <section class="card-display">
+	<!-- sort by date to display the most recent recipe first -->
+	
+
 	
 
 		<article class="card-recipe">
 			<div class="card-image">
-				<a href="/recipes/falafel.html" class="mx-auto">
+				<a href="/recipes/lisa/chickenKorma" class="mx-auto">
 					
-					<img src="/assets/img/default-image.jpg" class='img-responsive' alt="image falafel">
+						<img src="/assets/img/korm.jpg" class='img-responsive' alt="image poulet korma">
+					
 				  </a>
 			</div>
 			<div class="card-title">
-				<a href="/recipes/falafel.html" class="mx-auto">falafel</a>
+				<a href="/recipes/lisa/chickenKorma" class="mx-auto">poulet korma</a>
 			</div>
 			<div class="card-text">
 				<p>préparation : 15 min </p>
@@ -70,13 +80,14 @@
 
 		<article class="card-recipe">
 			<div class="card-image">
-				<a href="/recipes/muffin.html" class="mx-auto">
+				<a href="/recipes/marlene/muffin" class="mx-auto">
 					
-					<img src="/assets/img/default-image.jpg" class='img-responsive' alt="image muffin">
+						<img src="/assets/img/muffin.jpg" class='img-responsive' alt="image muffin">
+					
 				  </a>
 			</div>
 			<div class="card-title">
-				<a href="/recipes/muffin.html" class="mx-auto">muffin</a>
+				<a href="/recipes/marlene/muffin" class="mx-auto">muffin</a>
 			</div>
 			<div class="card-text">
 				<p>préparation : 10 min </p>
@@ -88,13 +99,33 @@
 
 		<article class="card-recipe">
 			<div class="card-image">
-				<a href="/recipes/crepe.html" class="mx-auto">
+				<a href="/recipes/marlene/tiramisu" class="mx-auto">
 					
-					<img src="/assets/img/default-image.jpg" class='img-responsive' alt="image crêpe">
+						<img src="/assets/img/tiramisu.jpg" class='img-responsive' alt="image tiramisu">
+					
 				  </a>
 			</div>
 			<div class="card-title">
-				<a href="/recipes/crepe.html" class="mx-auto">crêpe</a>
+				<a href="/recipes/marlene/tiramisu" class="mx-auto">tiramisu</a>
+			</div>
+			<div class="card-text">
+				<p>préparation : 15 min </p>
+				<p>cuisson : 0 min</p>
+			</div>
+		</article>
+
+	
+
+		<article class="card-recipe">
+			<div class="card-image">
+				<a href="/recipes/marlene/crepe" class="mx-auto">
+					
+						<img src="/assets/img/crepe.webp" class='img-responsive' alt="image crêpe">
+					
+				  </a>
+			</div>
+			<div class="card-title">
+				<a href="/recipes/marlene/crepe" class="mx-auto">crêpe</a>
 			</div>
 			<div class="card-text">
 				<p>préparation : 10 min </p>
@@ -106,31 +137,14 @@
 
 		<article class="card-recipe">
 			<div class="card-image">
-				<a href="/recipes/houmous.html" class="mx-auto">
+				<a href="/recipes/marlene/falafel" class="mx-auto">
 					
-					<img src="/assets/img/default-image.jpg" class='img-responsive' alt="image houmous">
+						<img src="/assets/img/falafel.jpg" class='img-responsive' alt="image falafel">
+					
 				  </a>
 			</div>
 			<div class="card-title">
-				<a href="/recipes/houmous.html" class="mx-auto">houmous</a>
-			</div>
-			<div class="card-text">
-				<p>préparation : 10 min </p>
-				<p>cuisson : 0 min</p>
-			</div>
-		</article>
-
-	
-
-		<article class="card-recipe">
-			<div class="card-image">
-				<a href="/recipes/tiramisu.html" class="mx-auto">
-					
-					<img src="/assets/img/default-image.jpg" class='img-responsive' alt="image tiramisu">
-				  </a>
-			</div>
-			<div class="card-title">
-				<a href="/recipes/tiramisu.html" class="mx-auto">tiramisu</a>
+				<a href="/recipes/marlene/falafel" class="mx-auto">falafel</a>
 			</div>
 			<div class="card-text">
 				<p>préparation : 15 min </p>
@@ -139,11 +153,47 @@
 		</article>
 
 	
-</section>
 
+		<article class="card-recipe">
+			<div class="card-image">
+				<a href="/recipes/marlene/tomKhaGai" class="mx-auto">
+					
+						<img src="/assets/img/tomKhaGai.jpg" class='img-responsive' alt="image tom kha gaï">
+					
+				  </a>
+			</div>
+			<div class="card-title">
+				<a href="/recipes/marlene/tomKhaGai" class="mx-auto">tom kha gaï</a>
+			</div>
+			<div class="card-text">
+				<p>préparation : 15 min </p>
+				<p>cuisson : 0 min</p>
+			</div>
+		</article>
+
+	
+
+		<article class="card-recipe">
+			<div class="card-image">
+				<a href="/recipes/lisa/houmous" class="mx-auto">
+					
+						<img src="/assets/img/houmous.jpg" class='img-responsive' alt="image houmous">
+					
+				  </a>
+			</div>
+			<div class="card-title">
+				<a href="/recipes/lisa/houmous" class="mx-auto">houmous</a>
+			</div>
+			<div class="card-text">
+				<p>préparation : 10 min </p>
+				<p>cuisson : 0 min</p>
+			</div>
+		</article>
+
+	
+</section>
     </main>
 
     <script src="/assets/js/app.js"></script>
-
   </body>
 </html>

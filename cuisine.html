@@ -1,25 +1,23 @@
 ---
 layout: default
-permalink: /auteur/
-title: auteur
-h1: auteurs
+permalink: /cuisine/
+title: cuisine
+h1: cuisines
 ---
 
 
-<!-- {% assign categories =  site.recipes | map: 'categories' | join: ','  | split: ',' | uniq %} -->
-{% assign categories =  site.recipes | map: 'categories' | uniq | sort %}
-
+{% assign cuisines =  site.recipes | map: 'cuisine' | uniq | sort%}
 <div class="accordion-display">
-  {% for category in categories %}
+  {% for cuisine in cuisines %}
 
     <div class="accordion-container">
-      <h3 class="accordion">{{ category }}</h3>
+      <h3 class="accordion">{{ cuisine }}</h3>
 
       <div class="panel">
 
         {% for recipe in site.recipes %}
 
-          {% if recipe.categories contains category %}
+          {% if recipe.cuisine contains cuisine %}
 
             <p>
               <a href="{{ site.baseurl }}{{ recipe.url }}">{{ recipe.title }}</a>
@@ -36,6 +34,7 @@ h1: auteurs
     
   {% endfor %}
 </div>
+
 
 <script>
   var acc = document.getElementsByClassName("accordion");
