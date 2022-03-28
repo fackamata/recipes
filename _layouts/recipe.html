@@ -71,7 +71,7 @@
         </ul>
       </div>
       
-      <p class="origin">Recette ajouté le  {{ page.date |  date: "%d-%m-%Y"  }} par {{ page.auteur }}</p>
+      <p class="origin">Recette ajouté le  {{ page.date  | date_to_string   }} par {{ page.auteur }}</p>
     </main>
 
     <script src="/assets/js/app.js"></script>

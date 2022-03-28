@@ -1,0 +1,40 @@
+---
+layout: default
+permalink: /search/
+title: recherche
+h1: recherche
+---
+<!-- Html Elements for Search -->
+<div id="search-container">
+  <input type="search" id="search-bar" placeholder="rechercher...">
+  <idv id="search-results"></idv>
+  </div>
+
+<script type="application/json" id="search-data">{% include searchJson.html %}</script>
+  
+<script>
+  var searchData = JSON.parse(document.getElementById('search-data').textContent);
+  console.log(searchData)
+  var searchResultList = document.getElementById('search-results');
+  var searchInput = document.getElementById('search-bar');
+
+  var updateSearchResults = function(e){
+    var query = e.target.value.toLowerCase();
+    if(query.trim() !== ''){
+      searchResultList.innerHTML = '';
+      for (let i  in searchData){
+        var searchItem = searchData[i];
+
+        if (searchItem.title.toLowerCase().includes(query) || searchItem.url.toLowerCase().includes(query)){
+          var searchLink = document.createElement('a');
+          var searchContent = document.createTextNode(searchItem.title);
+          console.log(searchContent);
+          searchLink.setAttribute('href', searchItem.url);
+          searchLink.appendChild(searchContent)
+          searchResultList.appendChild(searchLink)
+        }
+      }
+    }
+  };
+  searchInput.addEventListener('keyup', updateSearchResults );
+</script>

@@ -1,0 +1,10 @@
+[
+  {% for recipe in site.recipes %}
+    {
+      "title"    : "{{ recipe.title }}",
+      "url"      : "{{ site.baseurl }}{{ recipe.url }}",
+      "date"     : "{{ recipe.date | date_to_string }}",
+      "href"     : "{{ recipe.permalink }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

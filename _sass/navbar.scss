@@ -32,6 +32,10 @@
 
   color: $secondary-color;
   text-decoration: none;
+  img{
+    width: 17px;
+    height: 17px;
+  }
 }
 
 .main-navigation__link:hover {

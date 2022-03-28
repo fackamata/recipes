@@ -5,6 +5,16 @@ page.url: /index
 h1: recettes
 ---
 
+<div>
+	<form>
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email" />
+	  
+		<button type="submit">Submit</button>
+	  </form>
+	  
+</div>
+
 <section class="card-display">
 	<!-- sort by date to display the most recent recipe first -->
 	{% assign sorted_recipes = (site.recipes | sort: date) | reverse %}

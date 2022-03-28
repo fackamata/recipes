@@ -75,9 +75,28 @@
 
     
 
-  //                    auteur display
+  //                    search page
+
+  #search-container{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      #search-bar{
+          width: 200px;
+          height: 40px;
+          font-size: 1.3rem;
+      }
+      #search-results{
+          display: flex;
+          flex-direction: column;
+          margin-top: 1rem;
+          a{
+              all: unset;
+              font-size: 1.7rem;
+              color: $secondary-color;
+              cursor: pointer;
+          }
+      }
+  }
 
 
-
-  
-    

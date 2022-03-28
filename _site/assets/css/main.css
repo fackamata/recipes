@@ -22,6 +22,8 @@ ul { list-style: none; }
 
 .main-navigation__link { font-size: 1.4rem; color: #1A3E4C; text-decoration: none; }
 
+.main-navigation__link img { width: 17px; height: 17px; }
+
 .main-navigation__link:hover { text-decoration: underline; }
 
 .active { color: #092834; }
@@ -32,7 +34,7 @@ button .menu-bar { background-color: #E4F1F6; width: 30px; height: 5px; margin-b
 
 .burger-clicked { display: block; }
 
-@media screen and (min-width: 769px) { h1 { font-size: 4rem; } nav .main-navigation__list { flex-direction: row; justify-content: space-evenly; width: 75%; } nav .main-navigation__list__item { display: block; } nav .main-navigation__list__item:not(:first-of-type) { margin-top: inherit; } nav .portfolio:nth-child(even) { flex-direction: row; } nav .portfolio:nth-child(odd) { flex-direction: row-reverse; } nav .portfolio__image-container img { margin-top: 0; } nav .container--about { padding-left: 15%; padding-right: 15%; } nav button { display: none; } .accordion-display { flex-direction: row; } .liste { columns: 2; } }
+@media screen and (min-width: 769px) { h1 { font-size: 4rem; } nav .main-navigation__list { flex-direction: row; justify-content: space-between; width: 75%; } nav .main-navigation__list__item { display: block; } nav .main-navigation__list__item:not(:first-of-type) { margin-top: inherit; } nav .portfolio:nth-child(even) { flex-direction: row; } nav .portfolio:nth-child(odd) { flex-direction: row-reverse; } nav .portfolio__image-container img { margin-top: 0; } nav .container--about { padding-left: 15%; padding-right: 15%; } nav button { display: none; } .accordion-display { flex-direction: row; } .liste { columns: 2; } }
 
 .img-responsive { max-width: 100%; }
 
@@ -57,6 +59,14 @@ button .menu-bar { background-color: #E4F1F6; width: 30px; height: 5px; margin-b
 .accordion-display .accordion-container .panel { display: none; overflow: hidden; }
 
 .accordion-display .accordion-container .panel p a { all: unset; color: #1A3E4C; font-size: 1.5em; cursor: pointer; }
+
+#search-container { display: flex; justify-content: center; flex-direction: column; }
+
+#search-container #search-bar { width: 200px; height: 40px; font-size: 1.3rem; }
+
+#search-container #search-results { display: flex; flex-direction: column; margin-top: 1rem; }
+
+#search-container #search-results a { all: unset; font-size: 1.7rem; color: #1A3E4C; cursor: pointer; }
 
 .caracteristique { display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 1rem; }
 

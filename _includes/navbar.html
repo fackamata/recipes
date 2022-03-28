@@ -30,6 +30,11 @@
       class="main-navigation__link {% if page.title == "cuisine" %} active {% endif %}">
       cuisine</a>
     </li>
+    <li class="main-navigation__list__item">
+      <a href="{{ "/search/" | relative_url }}" 
+      class="main-navigation__link {% if page.title == "search" %} active {% endif %}">
+      <img src="/assets/img/search.png" alt="search icon">    </a>
+    </li>
   </ul>
 
   <button id="burgerBtn">

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>recherche</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+
+    <nav class="main-navigation">
+  <ul class="main-navigation__list">
+    <li class="main-navigation__list__item">
+      <a href="/" 
+      class="main-navigation__link ">
+      Recette</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/apero/" 
+      class="main-navigation__link ">
+      Apéro</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/plat/" 
+      class="main-navigation__link ">
+      Plat</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/dessert/" 
+      class="main-navigation__link ">
+      Déssert</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/auteur/" 
+      class="main-navigation__link ">
+      auteur</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/cuisine/" 
+      class="main-navigation__link ">
+      cuisine</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/search/" 
+      class="main-navigation__link ">
+      <img src="/assets/img/search.png" alt="search icon">    </a>
+    </li>
+  </ul>
+
+  <button id="burgerBtn">
+    <div class="menu-bar"></div>
+    <div class="menu-bar"></div>
+    <div class="menu-bar"></div>
+  </button>
+</nav>
+
+    <h1>recherche</h1>
+
+    <main>
+      <!-- Html Elements for Search -->
+<div id="search-container">
+  <input type="search" id="search-bar" placeholder="rechercher...">
+  <idv id="search-results"></idv>
+  </div>
+
+<script type="application/json" id="search-data">[
+  
+    {
+      "title"    : "houmous",
+      "url"      : "/recipes/lisa/houmous",
+      "date"     : "07 Jan 2022",
+      "href"     : ""
+    } ,
+  
+    {
+      "title"    : "tom kha gaï",
+      "url"      : "/recipes/marlene/tomKhaGai",
+      "date"     : "07 Jan 2022",
+      "href"     : ""
+    } ,
+  
+    {
+      "title"    : "falafel",
+      "url"      : "/recipes/marlene/falafel",
+      "date"     : "07 Feb 2022",
+      "href"     : ""
+    } ,
+  
+    {
+      "title"    : "crêpe",
+      "url"      : "/recipes/marlene/crepe",
+      "date"     : "07 Mar 2022",
+      "href"     : ""
+    } ,
+  
+    {
+      "title"    : "tiramisu",
+      "url"      : "/recipes/marlene/tiramisu",
+      "date"     : "07 Mar 2022",
+      "href"     : ""
+    } ,
+  
+    {
+      "title"    : "muffin",
+      "url"      : "/recipes/marlene/muffin",
+      "date"     : "22 Mar 2022",
+      "href"     : ""
+    } ,
+  
+    {
+      "title"    : "poulet korma",
+      "url"      : "/recipes/lisa/chickenKorma",
+      "date"     : "24 Mar 2022",
+      "href"     : ""
+    } 
+  
+]</script>
+  
+<script>
+  var searchData = JSON.parse(document.getElementById('search-data').textContent);
+  console.log(searchData)
+  var searchResultList = document.getElementById('search-results');
+  var searchInput = document.getElementById('search-bar');
+
+  var updateSearchResults = function(e){
+    var query = e.target.value.toLowerCase();
+    if(query.trim() !== ''){
+      searchResultList.innerHTML = '';
+      for (let i  in searchData){
+        var searchItem = searchData[i];
+
+        if (searchItem.title.toLowerCase().includes(query) || searchItem.url.toLowerCase().includes(query)){
+          var searchLink = document.createElement('a');
+          var searchContent = document.createTextNode(searchItem.title);
+          console.log(searchContent);
+          searchLink.setAttribute('href', searchItem.url);
+          searchLink.appendChild(searchContent)
+          searchResultList.appendChild(searchLink)
+        }
+      }
+    }
+  };
+  searchInput.addEventListener('keyup', updateSearchResults );
+</script>
+    </main>
+
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>
