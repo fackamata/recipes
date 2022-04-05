@@ -2,6 +2,9 @@ url: "/recipes" # the base hostname & protocol for your site, e.g. http://exampl
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "recette de famille" # the name of your site, e.g. ACME Corp.
 
+github: [metadata]
+description: >- # this means to ignore newlines until "baseurl:"
+  Simple recipe website with Jekyll.
 collections:
   recipes:
     output: true
