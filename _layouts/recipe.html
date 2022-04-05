@@ -12,16 +12,15 @@
     {% include navbar.html %}
     <main>
 
-      <h1> {{ page.title }}</h1>
+      <h1> {{ page.titre }}</h1>
 
-      <div class="caracteristique">
-        <p>Type de plat : {{ page.type }}</p>
-        <p>Type de cuisine : {{ page.cuisine }}</p>
-        <p>Temps de préparation : {{ page.preptime }}</p>
-        <p>Temps de cuisson : {{ page.cooktime }}</p>
-        <p>Nombre de convive : {{ page.servings }}</p>
-        <p>Difficulté : {{ page.difficulty }}</p>
-      </div>
+        
+        <div class="caracteristique">
+          <p>Type : {{ page.type | capitalize}}</p>
+          {% if page.type != 'cosmétique' %}
+            <p>Cuisine : {{ page.cuisine }}</p>
+          {% endif %} 
+        </div>
 
       <h2>Ingrédients : </h2>
       <ul class="liste">
@@ -48,7 +47,7 @@
       {% if page.sauce %}
       
         <h2>Sauce : </h2>
-        <ul class="liste">
+        <ul class=" liste">
 
           {% for ingredientSauce in page.sauce %}
             <li>
@@ -60,18 +59,18 @@
       {% endif %}  
       
       <div>
-        <h2>Étapes de la recette</h2>
+        <h2>Étapes de la recette :</h2>
         <ul class="etape">
 
           {% for instruction in page.instructions %}
             <li>
-              <p>{{ instruction }}</p>
+              <p>{{ instruction | capitalize }}</p>
             </li>
           {% endfor %}
         </ul>
       </div>
       
-      <p class="origin">Recette ajouté le  {{ page.date  | date_to_string   }} par {{ page.auteur }}</p>
+      <!-- <p class="origin">Recette ajouté le  {{ page.date  | date_to_string   }} par {{ page.categories }}</p> -->
     </main>
 
     <script src="/assets/js/app.js"></script>

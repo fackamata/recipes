@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <meta name="description" content="Un simple site de recette de famille"/>
     <title>apero</title>
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
@@ -13,7 +14,7 @@
     <li class="main-navigation__list__item">
       <a href="/" 
       class="main-navigation__link ">
-      Recette</a>
+      Recettes</a>
     </li>
     <li class="main-navigation__list__item">
       <a href="/apero/" 
@@ -28,17 +29,22 @@
     <li class="main-navigation__list__item">
       <a href="/dessert/" 
       class="main-navigation__link ">
-      Déssert</a>
-    </li>
-    <li class="main-navigation__list__item">
-      <a href="/auteur/" 
-      class="main-navigation__link ">
-      auteur</a>
+      Dessert</a>
     </li>
     <li class="main-navigation__list__item">
       <a href="/cuisine/" 
       class="main-navigation__link ">
       cuisine</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/autre/" 
+      class="main-navigation__link ">
+      autre</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/cosmetique/" 
+      class="main-navigation__link ">
+      cosmétique</a>
     </li>
     <li class="main-navigation__list__item">
       <a href="/search/" 
@@ -54,62 +60,92 @@
   </button>
 </nav>
 
-    <h1>apéros</h1>
+    <h1>Apéros</h1>
 
     <main>
-      <section class="card-display">
-
-	
-
-       
-
-      <article class="card-recipe">
-        <div class="card-image">
-          <a href="/recipes/lisa/houmous" class="mx-auto">
-            
-              <img src="/assets/img/houmous.jpg" class='img-responsive' alt="image houmous">
-            
-          </a>  
-        </div>
-        <div class="card-title">
-          <a href="/recipes/lisa/houmous" class="mx-auto">houmous</a>
-        </div>
-        <div class="card-text">
-          <p>préparation : 10 min </p>
-          <p>cuisson : 0 min</p>
-        </div>
-      </article>
       
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher ..">
+
+<table id="myTable">
+  <tr class="header">
+    <th>Titre</th>
+    <th>Auteur</th>
+    <th>Cuisine</th>
+  </tr>
+
+
+  
+    
     
 
-	
-
+  
+    
     
 
-	
-
+  
+    
     
 
-	
-
+  
+    
     
 
-	
-
+  
+    
     
 
-	
-
+  
+    
     
 
-	
-
+  
+    
     
 
-	
-</section>
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+     
+
+    <tr>
+      <td> <a href="/recipes/lisa/houmous" class="mx-auto">Houmous</a></td>
+      <td>Libanaise</td>
+      <td>lisa</td>
+    </tr>
+    
+    
+    
+    
+  </table> 
     </main>
 
     <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/table.js"></script>
   </body>
 </html>

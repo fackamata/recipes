@@ -1,8 +1,8 @@
 ---
 layout: default
-title: dessert
-page.url: /dessert
-h1: Desserts
+title: cosmetique
+page.url: /cosmetique
+h1: Cosmétique
 ---
 
 {% assign sorted_recipes = site.recipes | sort: date | reverse %}
@@ -12,17 +12,17 @@ h1: Desserts
 <table id="myTable">
   <tr class="header">
     <th>Titre</th>
-    <th>Cuisine</th>
+    <th>Type</th>
     <th>Auteur</th>
   </tr>
 {% for recipe in sorted_recipes %}
 
-  {% if recipe.type == 'dessert' %}   
+  {% if recipe.type == 'cosmétique' %}   
 
     <tr>
-      <td> <a href="{{ recipe.url }}" class="mx-auto">{{ recipe.titre  | capitalize}}</a></td>
+      <td> <a href="{{ recipe.url }}" class="mx-auto">{{ recipe.titre | capitalize }}</a></td>
       <td>{{recipe.cuisine}}</td>
-      <td>{{recipe.categories}}</td>
+      <td>{{recipe.categories }}</td>
     </tr>
     
     {% endif %}

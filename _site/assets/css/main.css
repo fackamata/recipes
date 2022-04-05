@@ -1,7 +1,7 @@
 /* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
-h1 { font-size: 3rem; max-width: max-content; margin: 30px auto; color: #347B98; }
+h1 { font-size: 3rem; max-width: max-content; margin: 30px auto; text-align: center; color: #347B98; }
 
 h2 { color: #347B98; }
 
@@ -10,6 +10,12 @@ html { background-color: #E4F1F6; }
 main { padding: 0 5vw; }
 
 ul { list-style: none; }
+
+a { all: unset; }
+
+.newRecipe { background-color: #347B98; color: white; padding: 12px 20px; border: none; border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer; position: relative; top: -30px; }
+
+.searchText { color: #347B98; text-align: center; margin-bottom: 2rem; }
 
 /* Navbar */
 .main-navigation { width: 100vw; padding-top: 2rem; padding-bottom: 2rem; background-color: #67AFCB; }
@@ -28,13 +34,13 @@ ul { list-style: none; }
 
 .active { color: #092834; }
 
-button { position: absolute; right: 30px; top: 20px; background-color: #67AFCB; border: none; }
+#burgerBtn { position: absolute; right: 30px; top: 20px; background-color: #67AFCB; border: none; }
 
-button .menu-bar { background-color: #E4F1F6; width: 30px; height: 5px; margin-bottom: 8px; border-radius: 20%; }
+#burgerBtn .menu-bar { background-color: #E4F1F6; width: 30px; height: 5px; margin-bottom: 8px; border-radius: 20%; }
 
 .burger-clicked { display: block; }
 
-@media screen and (min-width: 769px) { h1 { font-size: 4rem; } nav .main-navigation__list { flex-direction: row; justify-content: space-between; width: 75%; } nav .main-navigation__list__item { display: block; } nav .main-navigation__list__item:not(:first-of-type) { margin-top: inherit; } nav .portfolio:nth-child(even) { flex-direction: row; } nav .portfolio:nth-child(odd) { flex-direction: row-reverse; } nav .portfolio__image-container img { margin-top: 0; } nav .container--about { padding-left: 15%; padding-right: 15%; } nav button { display: none; } .accordion-display { flex-direction: row; } .liste { columns: 2; } }
+@media screen and (min-width: 769px) { main { max-width: 80%; margin: auto; } h1 { font-size: 3rem; } nav .main-navigation__list { flex-direction: row; justify-content: space-between; width: 95%; } nav .main-navigation__list__item { display: block; } nav .main-navigation__list__item:not(:first-of-type) { margin-top: inherit; } nav .portfolio:nth-child(even) { flex-direction: row; } nav .portfolio:nth-child(odd) { flex-direction: row-reverse; } nav .portfolio__image-container img { margin-top: 0; } nav button { display: none; } .accordion-display { flex-direction: row; } .caracteristique { margin-bottom: 1rem; color: #1A3E4C; text-align: center; } .liste { columns: 2; } .liste li { margin-left: 5rem; } .etape { margin-left: 3rem; } }
 
 .img-responsive { max-width: 100%; }
 
@@ -62,18 +68,64 @@ button .menu-bar { background-color: #E4F1F6; width: 30px; height: 5px; margin-b
 
 #search-container { display: flex; justify-content: center; flex-direction: column; }
 
-#search-container #search-bar { width: 200px; height: 40px; font-size: 1.3rem; }
+#search-container #search-bar { width: 300px; height: 40px; font-size: 1.3rem; }
 
 #search-container #search-results { display: flex; flex-direction: column; margin-top: 1rem; }
 
 #search-container #search-results a { all: unset; font-size: 1.7rem; color: #1A3E4C; cursor: pointer; }
 
-.caracteristique { display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 1rem; }
+.caracteristique { margin-bottom: 1rem; color: #1A3E4C; }
 
 .origin { margin-top: 1rem; }
 
-.liste { margin-left: 1rem; }
+.liste { margin: 1rem 1rem; color: #092834; }
 
-.etape > li { margin-top: 1rem; }
+.etape > li { margin-top: 1rem; color: #092834; }
+
+.origin { text-align: right; color: #092834; }
+
+#myInput { width: 100%; /* Full-width */ font-size: 16px; /* Increase font-size */ padding: 12px 20px 12px 40px; /* Add some padding */ border: 1px solid #ddd; /* Add a grey border */ margin-bottom: 12px; /* Add some space below the input */ }
+
+#myTable { border-collapse: collapse; /* Collapse borders */ width: 100%; /* Full-width */ border: 1px solid #ddd; /* Add a grey border */ font-size: 18px; /* Increase font-size */ color: #1A3E4C; }
+
+#myTable th, #myTable td { text-align: left; /* Left-align text */ padding: 12px; /* Add padding */ }
+
+#myTable tr { /* Add a bottom border to all table rows */ border-bottom: 1px solid #ddd; }
+
+#myTable tr.header, #myTable tr:hover { /* Add a grey background color to the table header and on hover */ background-color: #67AFCB; }
+
+td > a { all: unset; cursor: pointer; }
+
+th { cursor: pointer; }
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical; }
+
+input[type=date] { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical; }
+
+/* Style the label to display next to the inputs */
+label { padding: 12px 12px 12px 0; display: inline-block; }
+
+/* Style the submit button */
+button[type=submit] { background-color: #04AA6D; margin-top: 10px; color: white; padding: 12px 20px; border: none; border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer; float: right; }
+
+/* Style the container */
+.container { border-radius: 5px; padding: 20px; }
+
+/* Floating column for labels: 25% width */
+.col-25 { float: left; width: 25%; margin-top: 6px; }
+
+/* Floating column for inputs: 75% width */
+.col-75 { float: left; width: 75%; margin-top: 6px; }
+
+/* Clear floats after the columns */
+.row:after { content: ""; display: table; clear: both; }
+
+.btnDisplay { width: 240px; background-color: #347B98; color: white; padding: 12px 20px; border: none; border-radius: 4px; margin: 10px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+
+.flexBtn { display: flex; justify-content: space-around; }
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) { .col-25, .col-75, input[type=submit] { width: 100%; margin-top: 0; } .flexBtn { display: inline; } }
 
 /*# sourceMappingURL=main.css.map */

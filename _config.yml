@@ -1,6 +1,6 @@
-url: "fackamata.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "fackamata.github.io/recetteDeFamille" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "recette" # the name of your site, e.g. ACME Corp.
+title: "recette de famille" # the name of your site, e.g. ACME Corp.
 
 collections:
   recipes:

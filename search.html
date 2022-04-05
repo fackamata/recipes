@@ -2,11 +2,14 @@
 layout: default
 permalink: /search/
 title: recherche
-h1: recherche
+h1: Recherche
 ---
+
+<p class="searchText">recherche d'un ingrédient dans les recettes, minimum 3 charactères</p>
+
 <!-- Html Elements for Search -->
 <div id="search-container">
-  <input type="search" id="search-bar" placeholder="rechercher...">
+  <input type="search" id="search-bar" placeholder=" Ingredient ...">
   <idv id="search-results"></idv>
   </div>
 
@@ -20,18 +23,30 @@ h1: recherche
 
   var updateSearchResults = function(e){
     var query = e.target.value.toLowerCase();
-    if(query.trim() !== ''){
+    if(query.trim() !== '' && query.length > 2){
       searchResultList.innerHTML = '';
       for (let i  in searchData){
         var searchItem = searchData[i];
 
-        if (searchItem.title.toLowerCase().includes(query) || searchItem.url.toLowerCase().includes(query)){
-          var searchLink = document.createElement('a');
-          var searchContent = document.createTextNode(searchItem.title);
-          console.log(searchContent);
-          searchLink.setAttribute('href', searchItem.url);
-          searchLink.appendChild(searchContent)
-          searchResultList.appendChild(searchLink)
+        // search by ingredient, 
+        for (let ingredient in searchItem.ingredient){
+          if (ingredient.toLowerCase().includes(query)){
+            var searchLink = document.createElement('a');
+            var searchContent = document.createTextNode(searchItem.title);
+            searchLink.setAttribute('href', searchItem.url);
+            searchLink.appendChild(searchContent)
+            searchResultList.appendChild(searchLink)
+          }
+        }
+        // search by ingredient in marinade, 
+        for (let ingredientMarinade in searchItem.ingredientMarinade){
+          if (ingredientMarinade.toLowerCase().includes(query)){
+            var searchLink = document.createElement('a');
+            var searchContent = document.createTextNode(searchItem.title);
+            searchLink.setAttribute('href', searchItem.url);
+            searchLink.appendChild(searchContent)
+            searchResultList.appendChild(searchLink)
+          }
         }
       }
     }

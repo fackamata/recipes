@@ -2,43 +2,31 @@
 layout: default
 title: home
 page.url: /index
-h1: recettes
+h1: Recettes
 ---
 
-<div>
-	<form>
-		<label for="email">Email</label>
-		<input type="email" name="email" id="email" />
-	  
-		<button type="submit">Submit</button>
-	  </form>
-	  
-</div>
+<button class="newRecipe">
+  <a href="/creation">nouvelle recette</a>
+</button>
 
-<section class="card-display">
-	<!-- sort by date to display the most recent recipe first -->
-	{% assign sorted_recipes = (site.recipes | sort: date) | reverse %}
+{% assign sorted_recipes = site.recipes | sort: date | reverse %}
 
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher ..">
+
+<table id="myTable">
+  <tr class="header">
+    <th>Titre</th>
+    <th>Cuisine</th>
+    <th>Auteur</th>
+  </tr>
 	{% for recipe in sorted_recipes %}
 
-		<article class="card-recipe">
-			<div class="card-image">
-				<a href="{{ recipe.url }}" class="mx-auto">
-					{% if recipe.image %}
-						<img src="/assets/img/{{recipe.image}}" class='img-responsive' alt="image {{recipe.title }}">
-					{% else %}	
-						<img src="/assets/img/default-image.jpg" class='img-responsive' alt="image {{recipe.title }}">
-					{% endif %}
-				  </a>
-			</div>
-			<div class="card-title">
-				<a href="{{ recipe.url }}" class="mx-auto">{{ recipe.title }}</a>
-			</div>
-			<div class="card-text">
-				<p>préparation : {{ recipe.preptime}} min </p>
-				<p>cuisson : {{ recipe.cooktime}} min</p>
-			</div>
-		</article>
-
-	{% endfor %}
-</section>
+		<tr>
+			<td> <a href="{{ recipe.url }}" class="mx-auto">{{ recipe.titre  | capitalize}}</a></td>
+			<td>{{recipe.cuisine}}</td>
+			<td>{{recipe.categories}}</td>
+		</tr>
+		
+    {% endfor %}
+</table> 

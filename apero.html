@@ -2,36 +2,30 @@
 layout: default
 title: apero
 page.url: /apero
-h1: apéros
+h1: Apéros
 ---
 
+{% assign sorted_recipes = site.recipes | sort: date | reverse %}
 
-<section class="card-display">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher ..">
 
-	{% for recipe in site.recipes %}
+<table id="myTable">
+  <tr class="header">
+    <th>Titre</th>
+    <th>Auteur</th>
+    <th>Cuisine</th>
+  </tr>
+{% for recipe in sorted_recipes %}
 
-    {% if recipe.type == 'apero' %}   
+  {% if recipe.type == 'apéro' %}   
 
-      <article class="card-recipe">
-        <div class="card-image">
-          <a href="{{ recipe.url }}" class="mx-auto">
-            {% if recipe.image %}
-              <img src="/assets/img/{{recipe.image}}" class='img-responsive' alt="image {{recipe.title }}">
-            {% else %}	
-              <img src="/assets/img/default-image.jpg" class='img-responsive' alt="image {{recipe.title }}">
-            {% endif %}
-          </a>  
-        </div>
-        <div class="card-title">
-          <a href="{{ recipe.url }}" class="mx-auto">{{ recipe.title }}</a>
-        </div>
-        <div class="card-text">
-          <p>préparation : {{ recipe.preptime}} min </p>
-          <p>cuisson : {{ recipe.cooktime}} min</p>
-        </div>
-      </article>
-      
+    <tr>
+      <td> <a href="{{ recipe.url }}" class="mx-auto">{{ recipe.titre | capitalize }}</a></td>
+      <td>{{recipe.cuisine}}</td>
+      <td>{{recipe.categories}}</td>
+    </tr>
+    
     {% endif %}
-
-	{% endfor %}
-</section>
+    
+    {% endfor %}
+  </table> 

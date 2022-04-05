@@ -2,7 +2,7 @@
 layout: default
 permalink: /cuisine/
 title: cuisine
-h1: cuisines
+h1: Cuisines
 ---
 
 
@@ -20,7 +20,7 @@ h1: cuisines
           {% if recipe.cuisine contains cuisine %}
 
             <p>
-              <a href="{{ site.baseurl }}{{ recipe.url }}">{{ recipe.title }}</a>
+              <a href="{{ site.baseurl }}{{ recipe.url }}">{{ recipe.titre | capitalize }}</a>
             </p>
 
           {% endif %}

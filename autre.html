@@ -1,8 +1,8 @@
 ---
 layout: default
-title: plat
-page.url: /plat
-h1: Plats
+title: autre
+page.url: /autre
+h1: Autre
 ---
 
 {% assign sorted_recipes = site.recipes | sort: date | reverse %}
@@ -17,12 +17,12 @@ h1: Plats
   </tr>
   {% for recipe in sorted_recipes %}
 
-    {% if recipe.type == 'plat' %}   
+    {% if recipe.type == 'autre' %}   
 
       <tr>
         <td> <a href="{{ recipe.url }}" class="mx-auto">{{ recipe.titre | capitalize }}</a></td>
         <td>{{recipe.cuisine}}</td>
-        <td>{{recipe.categories}}</td>
+        <td>{{recipe.categories }}</td>
       </tr>
       
     {% endif %}

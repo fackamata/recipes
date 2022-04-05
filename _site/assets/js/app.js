@@ -3,7 +3,6 @@
 const burger = document.getElementById('burgerBtn');
 const navigationItem = document.querySelectorAll(".main-navigation__list__item");
 burger.addEventListener('click', ()=>{
-    console.log("clicked");
     navigationItem.forEach(element => {
         
         element.classList.toggle("burger-clicked");

@@ -2,8 +2,13 @@
 
 @media screen and (min-width: 769px){
 
+  main {
+    max-width: 80%;
+    margin: auto;
+  }
+
   h1{
-    font-size: 4rem;
+    font-size: 3rem;
   }
   //                navbar
   nav{
@@ -11,7 +16,7 @@
       flex-direction: row;
       justify-content: space-between;
       
-      width: 75%;
+      width: 95%;
     }
 
     .main-navigation__list__item{
@@ -33,12 +38,6 @@
     .portfolio__image-container img {
       margin-top: 0;
     }
-    
-    .container--about {
-      padding-left: 15%;
-      padding-right: 15%;
-    }
-
   
     // burger menu
     button{
@@ -52,13 +51,25 @@
 
   //                  recette page
 
+  .caracteristique{
+    margin-bottom: 1rem;
+    color: $secondary-color;
+    text-align: center;
+}
+
+
   //                  list on 2 columns
   .liste {
     columns: 2;
+   
+    li{
+      margin-left: 5rem;
+    }
   }
-
+ 
   .etape{
-    
+      margin-left: 3rem;
+
   }
 }
     

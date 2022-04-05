@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <meta name="description" content="Un simple site de recette de famille"/>
     <title>home</title>
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
@@ -13,7 +14,7 @@
     <li class="main-navigation__list__item">
       <a href="/" 
       class="main-navigation__link  active ">
-      Recette</a>
+      Recettes</a>
     </li>
     <li class="main-navigation__list__item">
       <a href="/apero/" 
@@ -28,17 +29,22 @@
     <li class="main-navigation__list__item">
       <a href="/dessert/" 
       class="main-navigation__link ">
-      Déssert</a>
-    </li>
-    <li class="main-navigation__list__item">
-      <a href="/auteur/" 
-      class="main-navigation__link ">
-      auteur</a>
+      Dessert</a>
     </li>
     <li class="main-navigation__list__item">
       <a href="/cuisine/" 
       class="main-navigation__link ">
       cuisine</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/autre/" 
+      class="main-navigation__link ">
+      autre</a>
+    </li>
+    <li class="main-navigation__list__item">
+      <a href="/cosmetique/" 
+      class="main-navigation__link ">
+      cosmétique</a>
     </li>
     <li class="main-navigation__list__item">
       <a href="/search/" 
@@ -54,160 +60,149 @@
   </button>
 </nav>
 
-    <h1>recettes</h1>
+    <h1>Recettes</h1>
 
     <main>
-      <div>
-	<form>
-		<label for="email">Email</label>
-		<input type="email" name="email" id="email" />
-	  
-		<button type="submit">Submit</button>
-	  </form>
-	  
-</div>
+      <button class="newRecipe">
+  <a href="/creation">nouvelle recette</a>
+</button>
 
-<section class="card-display">
-	<!-- sort by date to display the most recent recipe first -->
+
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher ..">
+
+<table id="myTable">
+  <tr class="header">
+    <th>Titre</th>
+    <th>Cuisine</th>
+    <th>Auteur</th>
+  </tr>
 	
 
-	
+		<tr>
+			<td> <a href="/recipes/marlene/deodorant" class="mx-auto">Déodorant</a></td>
+			<td>Cosmétique</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-		<article class="card-recipe">
-			<div class="card-image">
-				<a href="/recipes/lisa/chickenKorma" class="mx-auto">
-					
-						<img src="/assets/img/korm.jpg" class='img-responsive' alt="image poulet korma">
-					
-				  </a>
-			</div>
-			<div class="card-title">
-				<a href="/recipes/lisa/chickenKorma" class="mx-auto">poulet korma</a>
-			</div>
-			<div class="card-text">
-				<p>préparation : 15 min </p>
-				<p>cuisson : 0 min</p>
-			</div>
-		</article>
+		<tr>
+			<td> <a href="/recipes/marlene/truiteSauceEchalotes" class="mx-auto">Truite sauce échalotes vin blanc</a></td>
+			<td>Française</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-	
+		<tr>
+			<td> <a href="/recipes/marlene/butternutEtPatateDouce" class="mx-auto">Butternut et patate douce aux épices</a></td>
+			<td>Egyptienne</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-		<article class="card-recipe">
-			<div class="card-image">
-				<a href="/recipes/marlene/muffin" class="mx-auto">
-					
-						<img src="/assets/img/muffin.jpg" class='img-responsive' alt="image muffin">
-					
-				  </a>
-			</div>
-			<div class="card-title">
-				<a href="/recipes/marlene/muffin" class="mx-auto">muffin</a>
-			</div>
-			<div class="card-text">
-				<p>préparation : 10 min </p>
-				<p>cuisson : 30 min</p>
-			</div>
-		</article>
+		<tr>
+			<td> <a href="/recipes/marlene/meringue" class="mx-auto">Meringue</a></td>
+			<td>Française</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-	
+		<tr>
+			<td> <a href="/recipes/marlene/pateSable" class="mx-auto">Pâte sablée</a></td>
+			<td>Française</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-		<article class="card-recipe">
-			<div class="card-image">
-				<a href="/recipes/marlene/tiramisu" class="mx-auto">
-					
-						<img src="/assets/img/tiramisu.jpg" class='img-responsive' alt="image tiramisu">
-					
-				  </a>
-			</div>
-			<div class="card-title">
-				<a href="/recipes/marlene/tiramisu" class="mx-auto">tiramisu</a>
-			</div>
-			<div class="card-text">
-				<p>préparation : 15 min </p>
-				<p>cuisson : 0 min</p>
-			</div>
-		</article>
+		<tr>
+			<td> <a href="/recipes/marlene/fondantAuChocolat" class="mx-auto">Fondant au chocolat</a></td>
+			<td>Française</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-	
+		<tr>
+			<td> <a href="/recipes/marlene/brownies" class="mx-auto">Brownies</a></td>
+			<td>Américaine</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-		<article class="card-recipe">
-			<div class="card-image">
-				<a href="/recipes/marlene/crepe" class="mx-auto">
-					
-						<img src="/assets/img/crepe.webp" class='img-responsive' alt="image crêpe">
-					
-				  </a>
-			</div>
-			<div class="card-title">
-				<a href="/recipes/marlene/crepe" class="mx-auto">crêpe</a>
-			</div>
-			<div class="card-text">
-				<p>préparation : 10 min </p>
-				<p>cuisson : 15 min</p>
-			</div>
-		</article>
+		<tr>
+			<td> <a href="/recipes/lisa/chickenKorma" class="mx-auto">Poulet korma</a></td>
+			<td>Indienne</td>
+			<td>lisa</td>
+		</tr>
+		
+    
 
-	
+		<tr>
+			<td> <a href="/recipes/marlene/muffin" class="mx-auto">Muffin</a></td>
+			<td>Américaine</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-		<article class="card-recipe">
-			<div class="card-image">
-				<a href="/recipes/marlene/falafel" class="mx-auto">
-					
-						<img src="/assets/img/falafel.jpg" class='img-responsive' alt="image falafel">
-					
-				  </a>
-			</div>
-			<div class="card-title">
-				<a href="/recipes/marlene/falafel" class="mx-auto">falafel</a>
-			</div>
-			<div class="card-text">
-				<p>préparation : 15 min </p>
-				<p>cuisson : 0 min</p>
-			</div>
-		</article>
+		<tr>
+			<td> <a href="/recipes/marlene/tiramisu" class="mx-auto">Tiramisu</a></td>
+			<td>Italienne</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-	
+		<tr>
+			<td> <a href="/recipes/marlene/crepe" class="mx-auto">Crêpe</a></td>
+			<td>Française</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-		<article class="card-recipe">
-			<div class="card-image">
-				<a href="/recipes/marlene/tomKhaGai" class="mx-auto">
-					
-						<img src="/assets/img/tomKhaGai.jpg" class='img-responsive' alt="image tom kha gaï">
-					
-				  </a>
-			</div>
-			<div class="card-title">
-				<a href="/recipes/marlene/tomKhaGai" class="mx-auto">tom kha gaï</a>
-			</div>
-			<div class="card-text">
-				<p>préparation : 15 min </p>
-				<p>cuisson : 0 min</p>
-			</div>
-		</article>
+		<tr>
+			<td> <a href="/recipes/marlene/masqueAnticerne" class="mx-auto">Masque anticernes</a></td>
+			<td>Cosmétique</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-	
+		<tr>
+			<td> <a href="/recipes/marlene/falafel" class="mx-auto">Falafel</a></td>
+			<td>Libanaise</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-		<article class="card-recipe">
-			<div class="card-image">
-				<a href="/recipes/lisa/houmous" class="mx-auto">
-					
-						<img src="/assets/img/houmous.jpg" class='img-responsive' alt="image houmous">
-					
-				  </a>
-			</div>
-			<div class="card-title">
-				<a href="/recipes/lisa/houmous" class="mx-auto">houmous</a>
-			</div>
-			<div class="card-text">
-				<p>préparation : 10 min </p>
-				<p>cuisson : 0 min</p>
-			</div>
-		</article>
+		<tr>
+			<td> <a href="/recipes/marlene/tomKhaGai" class="mx-auto">Tom kha gaï</a></td>
+			<td>Thaïlandaise</td>
+			<td>marlene</td>
+		</tr>
+		
+    
 
-	
-</section>
+		<tr>
+			<td> <a href="/recipes/lisa/houmous" class="mx-auto">Houmous</a></td>
+			<td>Libanaise</td>
+			<td>lisa</td>
+		</tr>
+		
+    
+</table> 
     </main>
 
     <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/table.js"></script>
   </body>
 </html>
