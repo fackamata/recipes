@@ -6,7 +6,7 @@ h1: Recettes
 ---
 
 <button class="newRecipe">
-  <a href="/creation">nouvelle recette</a>
+  <a href="/recipes/creation">nouvelle recette</a>
 </button>
 
 {% assign sorted_recipes = site.recipes | sort: date | reverse %}
@@ -23,7 +23,7 @@ h1: Recettes
 	{% for recipe in sorted_recipes %}
 
 		<tr>
-			<td> <a href="{{ recipe.url }}" class="mx-auto">{{ recipe.titre  | capitalize}}</a></td>
+			<td> <a href="{{ site.baseurl }}{{ recipe.url }}" class="mx-auto">{{ recipe.titre  | capitalize}}</a></td>
 			<td>{{recipe.cuisine}}</td>
 			<td>{{recipe.categories}}</td>
 		</tr>
