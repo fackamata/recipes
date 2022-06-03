@@ -3,4 +3,4 @@
 a simple website to group family recipes
 
 
-[link]https://fackamata.github.io/recipes/
+[visit here](https://fackamata.github.io/recipes/)
