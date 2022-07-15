@@ -22,15 +22,6 @@
           {% endif %} 
         </div>
 
-      <h2>Ingrédients : </h2>
-      <ul class="liste">
-        {% for ingredient in page.ingredients %}
-          <li>
-            <p>{{ ingredient[0] }} : {{ ingredient[1] }}</p>
-          </li>
-        {% endfor %}
-      </ul>
-
       {% if page.marinade %}
       
         <h2>Marinade : </h2>
@@ -43,6 +34,15 @@
           {% endfor %}
         </ul>
       {% endif %}  
+
+      <h2>Ingrédients : </h2>
+      <ul class="liste">
+        {% for ingredient in page.ingredients %}
+          <li>
+            <p>{{ ingredient[0] }} : {{ ingredient[1] }}</p>
+          </li>
+        {% endfor %}
+      </ul>
 
       {% if page.sauce %}
       
