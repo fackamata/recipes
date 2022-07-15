@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{{ page.titre | capitalize }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">    
     <script src="https://kit.fontawesome.com/aeb3e6b307.js" crossorigin="anonymous"></script>
 
@@ -12,7 +12,7 @@
     {% include navbar.html %}
     <main>
 
-      <h1> {{ page.titre }}</h1>
+      <h1> {{ page.titre | capitalize}}</h1>
 
         
         <div class="caracteristique">
