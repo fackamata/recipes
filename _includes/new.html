@@ -1,19 +1,17 @@
-
-
 [
   {% for recipe in site.recipes %}
     {
       "title"    : "{{ recipe.titre }}",
       "url"      : "{{ site.baseurl }}{{ recipe.url }}",
       "date"     : "{{ recipe.date | date_to_string }}",
-      "ingredient" : [
+
+      "ingredient" : { 
         {% for ingredient in recipe.ingredients %} 
-        "{{ingredient| strip_html | strip_newlines}}"
-        {% unless forloop.last %},{% endunless %} {% endfor %}],
-      "ingredientMarinade" : [ 
+        " {{ ingredient  | strip_html | strip_newlines}} "{% unless forloop.last %},{% endunless %} {% endfor %},
+        
+      "ingredientMarinade" : { 
         {% for ingredientMarinade in recipe.marinade %} 
-        "{{ingredientMarinade | strip_html | strip_newlines}}"
-        {% unless forloop.last %},{% endunless %} {% endfor %}]
+        "{{ingredientMarinade | strip_html | strip_newlines}}"{% unless forloop.last %},{% endunless %} {% endfor %}}
      
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}

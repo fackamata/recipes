@@ -17,7 +17,7 @@ h1: Recherche
   
 <script>
   var searchData = JSON.parse(document.getElementById('search-data').textContent);
-  console.log(searchData)
+  // console.log(searchData)
   var searchResultList = document.getElementById('search-results');
   var searchInput = document.getElementById('search-bar');
 
@@ -27,9 +27,10 @@ h1: Recherche
       searchResultList.innerHTML = '';
       for (let i  in searchData){
         var searchItem = searchData[i];
-
         // search by ingredient, 
-        for (let ingredient in searchItem.ingredient){
+        for (let indI in searchItem.ingredient){
+          // console.log(searchItem.ingredient[ind]);
+          let ingredient = searchItem.ingredient[indI]
           if (ingredient.toLowerCase().includes(query)){
             var searchLink = document.createElement('a');
             var searchContent = document.createTextNode(searchItem.title);
@@ -39,7 +40,8 @@ h1: Recherche
           }
         }
         // search by ingredient in marinade, 
-        for (let ingredientMarinade in searchItem.ingredientMarinade){
+        for (let indM in searchItem.ingredientMarinade){
+          let ingredientMarinade = searchItem.ingredientMarinade[indM]
           if (ingredientMarinade.toLowerCase().includes(query)){
             var searchLink = document.createElement('a');
             var searchContent = document.createTextNode(searchItem.title);
