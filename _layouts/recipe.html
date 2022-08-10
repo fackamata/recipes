@@ -26,10 +26,9 @@
       
         <h2>Marinade : </h2>
         <ul class="liste">
-
           {% for ingredientMarinade in page.marinade %}
             <li>
-              <p>{{ ingredientMarinade[0] }} : {{ ingredientMarinade[1] }}</p>
+              <p>{{ ingredientMarinade }}</p>
             </li>
           {% endfor %}
         </ul>
@@ -39,7 +38,7 @@
       <ul class="liste">
         {% for ingredient in page.ingredients %}
           <li>
-            <p>{{ ingredient[0] }} : {{ ingredient[1] }}</p>
+            <p>{{ ingredient}}</p>
           </li>
         {% endfor %}
       </ul>
@@ -51,7 +50,7 @@
 
           {% for ingredientSauce in page.sauce %}
             <li>
-              <p>{{ ingredientSauce[0] }} : {{ ingredientSauce[1] }}</p>
+              <p>{{ ingredientSauce}}</p>
             </li>
           {% endfor %}
         </ul>
