@@ -1,8 +1,8 @@
 ---
 layout: default
-title: cosmetique
-page.url: /cosmetique
-h1: Cosmétique
+title: diy
+page.url: /diy
+h1: Do It Yourself
 ---
 
 {% assign sorted_recipes = site.recipes | sort: date | reverse %}
@@ -17,7 +17,7 @@ h1: Cosmétique
   </tr>
 {% for recipe in sorted_recipes %}
 
-  {% if recipe.type == 'cosmétique' %}   
+  {% if recipe.type == 'diy' %}   
 
     <tr>
       <td> <a href="{{ site.baseurl }}{{ recipe.url }}" class="mx-auto">{{ recipe.titre | capitalize }}</a></td>
